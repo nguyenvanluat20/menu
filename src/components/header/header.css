@@ -1,0 +1,129 @@
+/*Desktop View*/
+.header {
+  display: flex;
+  background: #06121e;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  height: 80px;
+}
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 150px;
+  height: 45px;
+}
+.nav-options {
+  padding-left: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 50px;
+  list-style: none;
+}
+.option a {
+  color: white;
+  text-decoration: none;
+}
+.mobile-option {
+  display: none;
+}
+.option :hover {
+  color: cadetblue;
+}
+.signin-up {
+  display: flex;
+  padding: 0px 5px;
+  list-style: none;
+}
+.sign-in {
+  padding-right: 50px;
+  align-self: center;
+}
+.sign-in a {
+  text-decoration: none;
+  color: white;
+}
+.sign-in :hover {
+  color: cadetblue;
+}
+.signup-btn {
+  text-decoration: none;
+  padding: 10px 10px;
+  height: 2.4rem;
+  border-radius: 3px;
+  background: rgb(241, 9, 9);
+  color: white;
+  cursor: pointer;
+  align-items: center;
+}
+.mobile-menu {
+  display: none;
+}
+@media (max-width: 648px) {
+  /*Mobile View */
+  .header {
+    padding: 0px 10px;
+  }
+  .logo {
+    width: 120px;
+    height: 45px;
+  }
+  .nav-options {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style: none;
+    grid-gap: 0px;
+  }
+  .nav-options.active {
+    background: #18181f;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-content: center;
+    padding-left: 0px;
+  }
+
+  .menu-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 30px 0px;
+  }
+  .sign-up {
+    background: rgb(241, 9, 9);
+    border-radius: 3px;
+    color: white;
+    padding: 20px 0px;
+    width: 80%;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  .signin-up {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
